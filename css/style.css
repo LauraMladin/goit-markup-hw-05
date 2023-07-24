@@ -501,18 +501,11 @@ ul {
     color: var(--white-color);
 }
 
-.hover-links li {
+.header_links, .active-link {
     position: relative;
-    
-}
-nav {
-    height: 100%;
-    padding-top: 32px;
-}
-
-.hover-links, .header_links {
     transition: color var(--time) var(--cubic-bezier);
     height: 100%;
+    
 }
 
 .header_links:hover::after {
@@ -523,10 +516,19 @@ nav {
     height: 4px;
     background-color: var(--link-color);
     border-radius: 2px;
-    bottom: 0;
+    bottom: -28px;
 }
 
-
+.active-link::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--link-color);
+    border-radius: 2px;
+    bottom: -28px;
+}
 
 .overlay-window {
     position: relative;
